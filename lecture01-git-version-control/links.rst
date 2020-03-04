@@ -1,14 +1,17 @@
 GIT
 ---
 
-Cheeat sheet by GitLab
+Git Handbook by GitHub:
+   https://guides.github.com/introduction/git-handbook/
+
+Cheeat sheet by GitLab:
     https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 
 A couple of good tutorials about GIT by Github
     https://www.youtube.com/githubguides
 
-Links by Github:
-    https://try.github.io
+Pro Git book - this answers all questions thoroughly, but might not be easy to read:
+   https://git-scm.com/book/en/v2
 
 A guided tour that walks through the fundamentals of Git:
     http://gitimmersion.com
@@ -19,19 +22,22 @@ A game playable in GIT:
 Interactive GIT cheatsheet
     http://ndpsoftware.com/git-cheatsheet.html
 
-How to rescue data in case of GIT accidents
+How to rescue data in case of GIT accidents:
     https://ohshitgit.com/
 
 A Visual Git Reference
     https://marklodato.github.io/visual-git-guide/index-en.html
 
+A couple of links by Github:
+    https://try.github.io
+
 Commit message style guide
     https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53
 
-How to write a good commit message
+How to write a good commit message:
     https://chris.beams.io/posts/git-commit/
 
-Auto generate bad commit messages
+Auto generate bad commit messages:
     http://whatthecommit.com/
 
 Workflow
