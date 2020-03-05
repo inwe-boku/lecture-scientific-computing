@@ -8,6 +8,7 @@
 %\usetheme{Madrid}
 \usetheme{Boadilla}
 
+\usepackage{qrcode}
 \usepackage{multirow}
 \usepackage[utf8]{inputenc}
 
@@ -39,8 +40,9 @@
 
 \usepackage{hyperref}
 \hypersetup{%
-	colorlinks=true
-	%,% hyperlinks will be coloured
+    % warning: color makes also QR code colored, therefore commented out
+	%colorlinks=true
+	% hyperlinks will be colored
 	%allcolors=ERC7
 }
 
@@ -122,10 +124,18 @@
 
 \end{frame}
 
-\begin{frame}{Some questions}
-
-see menti.com
-
+\begin{frame}{Survey regarding preknowledge}
+    \begin{center}
+        \textcolor{black}{
+            \qrcode[height=4.5cm]{https://www.menti.com/<snip>}
+        }\\
+        \vspace{0.5cm}
+        \huge{
+            or\\
+            menti.com\\
+            code <snip>
+        }
+    \end{center}
 \end{frame}
 
 \begin{frame}
