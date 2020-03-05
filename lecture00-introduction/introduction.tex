@@ -1,0 +1,273 @@
+\documentclass[10pt,color=usenames,dvipsnames]{beamer}
+
+\usepackage{graphicx}
+\usepackage{listings}
+
+\mode<presentation> {
+
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage[export]{adjustbox}
+
+\definecolor{bokugreen}{rgb}{0, 0.49, 0}
+
+%\setbeamercolor{palette primary}{fg=bokugreen}
+%\setbeamercolor{palette secondary}{bg=white,fg=bokugreen}
+%\setbeamercolor{palette tertiary}{bg=white,fg=bokugreen}
+%\setbeamercolor{palette quaternary}{bg=white,fg=bokugreen}
+\setbeamercolor{structure}{fg=bokugreen} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=bokugreen,bg=white} % TOC sections
+
+\usebackgroundtemplate%
+{%
+	\vspace{-0.5cm}
+	\hspace{9.5cm}
+	\includegraphics{bokulogo.png}%
+
+}
+
+
+
+
+
+\usepackage{hyperref}
+\hypersetup{%
+	colorlinks=true
+	%,% hyperlinks will be coloured
+	%allcolors=ERC7
+}
+
+
+
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[frame number]{}
+
+%gets rid of bottom navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%gets rid of footer
+%will override 'frame number' instruction above
+%comment out to revert to previous/default definitions
+\setbeamertemplate{footline}{}
+
+% Override palette coloring with secondary
+%\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+
+%\usecolortheme{lily}
+\useoutertheme{infolines}
+
+}
+
+
+\usepackage{booktabs} 
+\usepackage{tikz}
+
+
+% Thin fonts
+\usepackage{cmbright}
+\usepackage[T1]{fontenc}
+
+%\definecolor{dark_grey}{gray}{0.5}
+%\setbeamercolor{normal text}{fg=dark_grey,bg=white}
+%\setbeamertemplate{navigation symbols}{}
+
+%\setbeamercolor*{palette primary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{palette quaternary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{palette secondary}{fg=gray!100,bg=gray!20}
+%\setbeamercolor*{palette tertiary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{navigation symbols}{fg=white,bg=white}
+\usefonttheme{default}
+
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+%\setbeamercolor{block title}{bg=gray!10}
+%\setbeamercolor{block body}{fg=gray,bg=gray!10}
+%\setbeamercolor{frametitle}{fg=}
+
+\setbeamertemplate{frametitle}[default][center]
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\newcommand{\F}{\mathbb{F}}
+
+
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\setbeamertemplate{frametitle}[default][left]
+\addtobeamertemplate{frametitle}{}{\vspace{4em}} % increase
+
+
+\title[Scientific Computing]{Scientific Computing}
+\subtitle{Introduction}
+
+\author{Peter Regner, Johannes Schmidt}
+\institute{Institute for Sustainable Economic Development, BOKU, Wien}
+\date{12.3.2020}
+
+\begin{document}
+
+
+
+\begin{frame}
+\vspace{2cm}
+\maketitle
+
+\end{frame}
+
+\begin{frame}{Some questions}
+
+see menti.com
+
+\end{frame}
+
+\begin{frame}
+	
+	\tableofcontents
+	
+\end{frame}
+
+\section{Who we are}
+
+\begin{frame}{Who we are}
+...	
+\end{frame}
+
+\section{What this course is about}
+
+\begin{frame}{Aim of course}
+	
+	Learn to use programming as a tool in research
+	
+	\begin{itemize}
+		\item Version control your code with git and collaborate on git(hub)
+		\item Install python, python packages, and notebook servers in conda environments
+		\item Understand composition of python scientific stack
+		\item Start programming in python and understand flow featurs (loops and conditions), functions, classes and objects
+		\item Use python stack packages (numpy, xarray)
+		\item Use open (climate) data in your research projects
+		\item Generate plots
+	\end{itemize}
+	
+\end{frame}
+
+\section{How the class works}
+
+\begin{frame}{How the class works}
+	
+	\begin{itemize}
+		\item 1.5 hours of lecture
+		\item 1.5 hours of practical exercises
+		\item Homework in groups
+	\end{itemize}	
+
+\end{frame}
+
+\section{Prerequisites}
+
+\begin{frame}{Prerequisites}
+	
+	\begin{itemize}
+		\item You should feel very comfortable with your respective operating system (Windows, Linux, Mac OS)
+		\item Ideally, you have some experience with using a command line / terminal
+		\item In a perfect world, you have programmed before
+	\end{itemize}
+	
+\end{frame}
+
+
+\section{How we grade}
+
+\begin{frame}{Grading scheme}
+
+	\begin{itemize}
+		\item Organize in groups of 4 students	
+		\item Do homework together
+		\item Be prepared to present homework individually ("Kreuzerlübung")		
+	\end{itemize}
+
+\end{frame}
+
+\section{Resources}
+
+\begin{frame}{Resources}
+	
+	\begin{itemize}
+		\item Our forum on... Post there! Do NOT write emails to us.
+		\item Your fellow peers in your group!
+		\item Us, in class
+	\end{itemize}
+
+
+\end{frame}
+
+\section{First assignment}
+
+\begin{frame}{First assignment (I)}
+
+
+Homework (due on 19th of March):
+
+\begin{itemize}
+	
+	\item register at github.com or any alternative GIT hoster (e.g. gitlab.com)
+	\item install a GIT and gitk (see instructions (1) below)
+	\item click/browse quickly through links \& tutorials (see links below)
+	\item  clone a repository, change a file and commit (see instructions (2) below)
+	\item prepare one question about GIT and add it to the list: \href{https://yourpart.eu/p/lecture-scientific-computing}{https://yourpart.eu/p/lecture-scientific-computing}
+
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{First assignment (II)}
+	(1) Install GIT \& gitk
+	
+	Linux: on Debian based systems run the command:
+	
+	sudo apt install git gitk
+	
+		Windows:
+	(a) install notepad++ (https://notepad-plus-plus.org/downloads/)
+	(b) install git for windows (https://gitforwindows.org/). During the installation procedure, choose notepad++ as your preferred edtior.
+	
+	(2) Clone the lecture repository
+	
+	Run a terminal (windows: GIT bash) and run the command:
+	
+	%\begin{verbatim}
+	git clone https://github.com/inwe-boku/lecture-scientific-computing.git
+	%\end{verbatim}
+	
+	Then change a file of your choice and run:
+	
+	%\begin{verbatim}
+	git add <file-name-of-the-file-you-changed>
+	%\end{verbatim}
+	
+	Explain your change in the commit message and close the editor.
+	
+	Run gitk to check your commit.
+	
+	See also:
+	\href{https://guides.github.com/introduction/git-handbook/}{https://guides.github.com/introduction/git-handbook/}
+	(especially "Example: Contribute to an existing repository")
+	
+	
+	More helpful resources about GIT can be found here:
+	\href{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
+	{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
+
+\end{frame}
+
+
+
+\end{document} 
