@@ -232,9 +232,9 @@ Homework (due on 19th of March):
 \begin{itemize}
 	
 	\item register at github.com or any alternative GIT hoster (e.g. gitlab.com)
-	\item install a GIT and gitk (see instructions (1) below)
-	\item click/browse quickly through links \& tutorials (see links below)
-	\item  clone a repository, change a file and commit (see instructions (2) below)
+	\item install a GIT and gitk (see instructions (1) on next slide)
+	\item click/browse quickly through links \& tutorials (see on next slide)
+	\item clone a repository, change a file and commit (see instructions (2) next slide)
 	\item prepare one question about GIT and add it to the list: \href{https://yourpart.eu/p/lecture-scientific-computing}{https://yourpart.eu/p/lecture-scientific-computing}
 
 \end{itemize}
@@ -242,46 +242,63 @@ Homework (due on 19th of March):
 
 \end{frame}
 
-\begin{frame}{First assignment (II)}
+\begin{frame}[fragile]{First assignment (II)}
 	(1) Install GIT \& gitk
-	
+
 	Linux: on Debian based systems run the command:
-	
-	sudo apt install git gitk
-	
-		Windows:
-	(a) install notepad++ (https://notepad-plus-plus.org/downloads/)
-	(b) install git for windows (https://gitforwindows.org/). During the installation procedure, choose notepad++ as your preferred edtior.
-	
-	(2) Clone the lecture repository
-	
-	Run a terminal (windows: GIT bash) and run the command:
-	
-	%\begin{verbatim}
-	git clone https://github.com/inwe-boku/lecture-scientific-computing.git
-	%\end{verbatim}
-	
-	Then change a file of your choice and run:
-	
-	%\begin{verbatim}
-	git add <file-name-of-the-file-you-changed>
-	%\end{verbatim}
-	
-	Explain your change in the commit message and close the editor.
-	
-	Run gitk to check your commit.
-	
-	See also:
-	\href{https://guides.github.com/introduction/git-handbook/}{https://guides.github.com/introduction/git-handbook/}
-	(especially "Example: Contribute to an existing repository")
-	
-	
-	More helpful resources about GIT can be found here:
-	\href{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
-	{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
+
+	\begin{verbatim}
+	    sudo apt install git gitk
+	\end{verbatim}
+
+    Windows:
+    \begin{enumerate}
+        \item install notepad++ (https://notepad-plus-plus.org/downloads/)
+        \item install git for windows (https://gitforwindows.org/). During the installation procedure,
+            choose notepad++ as your preferred editor.
+    \end{enumerate}
 
 \end{frame}
 
+\begin{frame}[fragile]{First assignment (III)}
+	(2) Clone the lecture repository and add a commit
 
+	Run a terminal (windows: GIT bash) and run the command:
 
-\end{document} 
+    {\footnotesize
+        \begin{verbatim}
+            git clone https://github.com/inwe-boku/lecture-scientific-computing
+        \end{verbatim}
+    }
+
+	Then change a file of your choice and run:
+
+	\begin{verbatim}
+	    git add <file-name-of-the-file-you-changed>
+	\end{verbatim}
+
+	Explain your change in the commit message and close the editor.
+
+	Run gitk to check your commit.
+
+\end{frame}
+
+\begin{frame}[fragile]{First assignment (IV)}
+	See also:\\
+	\href{https://guides.github.com/introduction/git-handbook/}{https://guides.github.com/introduction/git-handbook/}\\
+	(especially "Example: Contribute to an existing repository")
+    \bigskip
+
+	More helpful resources about GIT can be found here:\\
+	\href{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
+	{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture01-git-version-control/links.rst}
+\end{frame}
+
+\begin{frame}{First assignment (V)}
+    Warning: you will need to push your homework to a public Github repository. Your Github account
+    is your business card for programmers. You can create a separate Github account only for this
+    course to be anonymous or your group deletes the repository after the semester, if you don't
+    want your homework to remain public.
+\end{frame}
+
+\end{document}
