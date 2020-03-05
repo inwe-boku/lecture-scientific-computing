@@ -26,17 +26,13 @@
 \setbeamercolor{structure}{fg=bokugreen} % itemize, enumerate, etc
 %\setbeamercolor{section in toc}{fg=bokugreen,bg=white} % TOC sections
 
-\usebackgroundtemplate%
-{%
-	\vspace{-0.5cm}
-	\hspace{9.5cm}
-	\includegraphics{bokulogo.png}%
-
-}
-
-
-
-
+%\usebackgroundtemplate%
+%{%
+%	\vspace{-0.5cm}
+%	\hspace{9.5cm}
+%	\includegraphics{bokulogo.png}%
+%
+%}
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -101,10 +97,9 @@
 
 \newcommand{\F}{\mathbb{F}}
 
-
 \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
 \setbeamertemplate{frametitle}[default][left]
-\addtobeamertemplate{frametitle}{}{\vspace{4em}} % increase
+%\addtobeamertemplate{frametitle}{}{\vspace{4em}} % increase
 
 
 \title[Scientific Computing]{Scientific Computing}
@@ -116,12 +111,12 @@
 
 \begin{document}
 
-
-
-\begin{frame}
-\vspace{2cm}
-\maketitle
-
+% Title Page
+\begin{frame}[plain]
+    \maketitle
+    \begin{center}
+        \includegraphics[height=1.7cm]{boku-logo.pdf}\\
+    \end{center}
 \end{frame}
 
 \begin{frame}{Survey regarding preknowledge}
