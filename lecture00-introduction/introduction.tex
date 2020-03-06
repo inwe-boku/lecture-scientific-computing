@@ -67,6 +67,15 @@
 \usepackage{cmbright}
 \usepackage[T1]{fontenc}
 
+% add git commit hash
+\usepackage{xstring}
+\usepackage{catchfile}
+\CatchFileDef{\HEAD}{../.git/refs/heads/master}{}
+\newcommand{\gitrevision}{%
+  \StrLeft{\HEAD}{7}%
+}
+
+
 %\definecolor{dark_grey}{gray}{0.5}
 %\setbeamercolor{normal text}{fg=dark_grey,bg=white}
 %\setbeamertemplate{navigation symbols}{}
@@ -110,6 +119,13 @@
     \begin{center}
         \includegraphics[height=1.7cm]{boku-logo.pdf}\\
     \end{center}
+    \vfill
+    {
+        \tiny
+        Latest version available on
+        \href{https://github.com/inwe-boku/lecture-scientific-computing/}{Github},
+        this PDF is version \gitrevision.
+    }
 \end{frame}
 
 \begin{frame}{Survey regarding preknowledge}
