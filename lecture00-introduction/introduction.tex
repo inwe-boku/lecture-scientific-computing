@@ -287,19 +287,33 @@ Homework (due on 19th of March):
 \begin{frame}[fragile]{First assignment (II)}
 	(1) Install GIT \& gitk
 
-	Linux: on Debian based systems run the command:
+    {\bf Installation on Linux:}\\
+    on Debian based systems run the command:
 
 	\begin{verbatim}
 	    sudo apt install git gitk
 	\end{verbatim}
 
-    Windows:
+    {\bf Installation on Windows:}
     \begin{enumerate}
         \item install notepad++ (\href{https://notepad-plus-plus.org/downloads/}{https://notepad-plus-plus.org/downloads/})
         \item install git for windows
             (\href{https://gitforwindows.org/}{https://gitforwindows.org/}). During the
             installation procedure, choose notepad++ as your preferred editor.
     \end{enumerate}
+
+    {\bf Configure name and mail address:}\\
+    Run a terminal (windows: GIT bash) and run the command\footnote{
+        See also
+            \href{https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup}
+            {https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup}
+    }:
+    {\small
+        \begin{verbatim}
+    git config --global user.name "My Name or Pseudonym"
+    git config --global user.email my-public-mailadress@example.com
+        \end{verbatim}
+    }
 
 \end{frame}
 
@@ -339,9 +353,10 @@ Homework (due on 19th of March):
 
 \begin{frame}{First assignment (V)}
     Warning: you will need to push your homework to a public Github repository. Your Github account
-    is your business card for programmers. You can create a separate Github account only for this
-    course to be anonymous or your group deletes the repository after the semester, if you don't
-    want your homework to remain public.
+    is your business card for programmers -- your homework will be part of it. You can create a
+    separate Github account only for this course to be anonymous or your group deletes the
+    repository after the semester, if you don't want your homework to remain public. Note: the name
+    and mail address chosen during the GIT installation will be public too.
 \end{frame}
 
 \end{document}
