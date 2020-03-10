@@ -2,7 +2,7 @@
 
 name: Compile slides
 
-# Controls when the action will run. Triggers the workflow on push or pull request 
+# Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
@@ -22,23 +22,21 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v2
 
-    - name: Change to subfolder
-      run: cd lecture00-introduction/
-      
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
+        working_directory: lecture00-introduction
         root_file: slides.tex
 
     - name: Commit PDF files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git checkout gh-pages       
-        mv slides.pdf ../lecture00-introduction.pdf
-        git add ../lecture00-introduction.pdf
+        git checkout gh-pages
+        mv lecture00-introduction/slides.pdf lecture00-introduction.pdf
+        git add lecture00-introduction.pdf
         git commit -m 'Add slides to GH pages'
-        
+
     - name: Push PDF to Github pages
       uses: ad-m/github-push-action@master
       with:
