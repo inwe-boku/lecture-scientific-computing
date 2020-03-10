@@ -32,6 +32,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
         git checkout gh-pages
         mv lecture00-introduction/slides.pdf lecture00-introduction.pdf
         git add lecture00-introduction.pdf
