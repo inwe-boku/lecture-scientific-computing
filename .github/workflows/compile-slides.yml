@@ -22,18 +22,21 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v2
 
+    - name: Change to subfolder
+      run: cd lecture00-introduction/
+      
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
-        root_file: lecture00-introduction/slides.tex
+        root_file: slides.tex
 
     - name: Commit PDF files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git checkout gh-pages       
-        mv lecture00-introduction/slides.pdf  lecture00-introduction.pdf
-        git add lecture00-introduction.pdf
+        mv slides.pdf ../lecture00-introduction.pdf
+        git add ../lecture00-introduction.pdf
         git commit -m 'Add slides to GH pages'
         
     - name: Push PDF to Github pages
