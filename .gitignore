@@ -47,3 +47,7 @@ coverage.xml
 *.snm
 *.nav
 *.run.xml
+
+slides.out
+slides.pdf
+slides.vrb
