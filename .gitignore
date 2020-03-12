@@ -49,5 +49,5 @@ coverage.xml
 *.run.xml
 
 slides.out
-slides.pdf
+slides.fls
 slides.vrb
