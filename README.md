@@ -11,4 +11,4 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 
 
 ## Slides
-- [Introduction](https://inwe-boku.github.io/lecture-scientific-computing/lecture00-introduction.pdf)
+- [Introduction](lecture00-introduction/slides.pdf)
