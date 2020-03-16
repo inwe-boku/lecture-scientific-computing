@@ -1,0 +1,109 @@
+\documentclass[10pt,color=usenames,dvipsnames]{beamer}
+
+\usepackage{graphicx}
+\usepackage{listings}
+
+\mode<presentation> {
+
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+
+\usepackage{qrcode}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage[export]{adjustbox}
+
+\definecolor{bokugreen}{rgb}{0, 0.49, 0}
+
+%\setbeamercolor{palette primary}{fg=bokugreen}
+%\setbeamercolor{palette secondary}{bg=white,fg=bokugreen}
+%\setbeamercolor{palette tertiary}{bg=white,fg=bokugreen}
+%\setbeamercolor{palette quaternary}{bg=white,fg=bokugreen}
+\setbeamercolor{structure}{fg=bokugreen} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=bokugreen,bg=white} % TOC sections
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+
+%\usebackgroundtemplate%
+%{%
+%	\vspace{-0.5cm}
+%	\hspace{9.5cm}
+%	\includegraphics{bokulogo.png}%
+%
+%}
+
+\usepackage{hyperref}
+\hypersetup{%
+    % warning: color makes also QR code colored, therefore commented out
+	%colorlinks=true
+	% hyperlinks will be colored
+	%allcolors=ERC7
+}
+
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[frame number]
+
+%gets rid of bottom navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Override palette coloring with secondary
+%\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+
+%\usecolortheme{lily}
+\useoutertheme{infolines}
+
+}
+
+\usepackage{booktabs}
+\usepackage{tikz}
+
+% Thin fonts
+\usepackage{cmbright}
+\usepackage[T1]{fontenc}
+
+% add git commit hash
+\usepackage{xstring}
+\usepackage{catchfile}
+\CatchFileDef{\HEAD}{../.git/refs/heads/master}{}
+\newcommand{\gitrevision}{%
+  \StrLeft{\HEAD}{7}%
+}
+
+
+%\definecolor{dark_grey}{gray}{0.5}
+%\setbeamercolor{normal text}{fg=dark_grey,bg=white}
+%\setbeamertemplate{navigation symbols}{}
+
+%\setbeamercolor*{palette primary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{palette quaternary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{palette secondary}{fg=gray!100,bg=gray!20}
+%\setbeamercolor*{palette tertiary}{fg=gray!100,bg=gray!10}
+%\setbeamercolor*{navigation symbols}{fg=white,bg=white}
+\usefonttheme{default}
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+%\setbeamercolor{block title}{bg=gray!10}
+%\setbeamercolor{block body}{fg=gray,bg=gray!10}
+%\setbeamercolor{frametitle}{fg=}
+
+\setbeamertemplate{frametitle}[default][center]
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\newcommand{\F}{\mathbb{F}}
+
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\setbeamertemplate{frametitle}[default][left]
+%\addtobeamertemplate{frametitle}{}{\vspace{4em}} % increase
+
+
+\title[Scientific Computing]{Scientific Computing}
+\author{Peter Regner, Johannes Schmidt}
+\institute{Institute for Sustainable Economic Development, BOKU, Wien}
