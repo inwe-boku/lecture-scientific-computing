@@ -17,3 +17,5 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 - [Open questtions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
 - [Answered questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue+is%3Aclosed)
 - [All questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue)
+
+I was here (G)
