@@ -1,0 +1,132 @@
+\input{../common/header.tex}
+\subtitle{Command line, GIT and version control}
+\date{19.3.2020}
+\input{../common/title.tex}
+
+\begin{frame}
+
+	\tableofcontents
+
+\end{frame}
+
+\section{Using a command line}
+
+\begin{frame}[fragile]{Command line: Live Demo}
+    Live Demo:
+    \begin{verbatim}
+    cowsay -f snowman "I'm sweating"
+    \end{verbatim}
+    \begin{verbatim}
+    cowthink "meh."
+    \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{What is a command line?}
+    A command line is a computer interface, which allows you to type commands with parameters
+    and to receive text output:\\
+
+    Type something like:
+    \begin{verbatim}
+        command parameter1 parameter2[ENTER]\end{verbatim}
+    Then the \verb|command| will run and output will be printed on the screen.
+    \bigskip
+    \pause
+    \begin{itemize}
+        \item Often used as synonyms: terminal, shell, command line, console
+        \item Everything about command lines refers to Linux command lines, but git-bash in Windows
+            and the terminal in Mac OS are very similar, but the standard Windows terminal is quite different
+            (don't use it: PITA).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Command line: Syntax}
+
+    \begin{itemize}
+        \item Command and all parameters are space-separated
+        \item Parameters containing spaces (e.g. file paths) need to be wrapped in double or single
+            quotes:
+            \begin{verbatim}
+    ls "path/to a folder with spaces/subfolder"\end{verbatim}
+        \item There are different standard forms of parameters:
+        \begin{itemize}
+            \item \verb|command parameter|
+            \item \verb|command --parameter-name=parameter|
+            \item \verb|command --parameter-name parameter|
+            \item \verb|command -p parameter|
+            \item \verb|command -p=parameter|
+        \end{itemize}
+    \end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]{File and folder paths}
+    \begin{itemize}
+        \item {\bf working directory:} when using a terminal, you are always working in a
+            directory, similar to opening a folder in a file browser
+        \item {\bf absolute file paths} start with \verb|/| (Linux, Mac OS) or something like \verb|C:\|
+            (Windows), example:
+            {\small
+            \begin{verbatim}ls /home/peter/lecture-scientific-computing/README.md \end{verbatim}}
+        \item {\bf relative paths} are relative to the current working directory of the terminal (with some few unimportant exceptions), example:
+            {\small
+            \begin{verbatim}ls lecture-scientific-computing/README.md\end{verbatim}}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Important command line commands}
+    \begin{itemize}
+        \item print working directory
+\begin{verbatim}$ pwd
+/home/peter
+\end{verbatim}
+        \item change (working) directory
+\begin{verbatim}$ cd path/to/folder\end{verbatim}
+        \item \verb|ls -l| list directory content
+\begin{verbatim}$ ls -l
+-rw-rw-r-- 1 peter peter 2,0K Aug  3  2009 book_1.docx
+-rw-rw-r-- 1 peter peter 5,0K Aug  3  2009 book_2.docx
+\end{verbatim}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Helpful tricks}
+    \begin{itemize}
+        \item abort a running command:
+            \begin{verbatim}CTRL + C\end{verbatim}
+        \item hitting the TAB key auto-completes your command in many situations, e.g.:
+            \begin{verbatim}ls path/to/fol<TAB>\end{verbatim}
+        \item previously run commands can be accessed using cursor keys or search:
+            \begin{verbatim}CTRL + R\end{verbatim}
+        \item run command in background using a trailing \verb|&|, useful for running gitk:
+            \begin{verbatim}gitk&\end{verbatim}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Getting help}
+    Many commands print a help text when called with parameter \verb|-h| or \verb|--help|:
+\begin{verbatim}$ sleep --help
+Usage: sleep NUMBER[SUFFIX]...
+  or:  sleep OPTION
+Pause for NUMBER seconds.  SUFFIX may be 's' for
+seconds (the default), 'm' for minutes, 'h' for
+hours or 'd' for days.
+\end{verbatim}
+
+\bigskip
+\pause
+
+But googling is fine too!
+
+\bigskip
+\pause
+Introduction tutorial:\\
+\href{https://ubuntu.com/tutorials/command-line-for-beginners}{https://ubuntu.com/tutorials/command-line-for-beginners}
+
+\end{frame}
+
+\end{document}
