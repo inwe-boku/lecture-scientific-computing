@@ -104,6 +104,17 @@
 \setbeamertemplate{frametitle}[default][left]
 %\addtobeamertemplate{frametitle}{}{\vspace{4em}} % increase
 
+% introduce sections with title slide
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 
 \title[Scientific Computing]{Scientific Computing}
 \author{Peter Regner, Johannes Schmidt}
