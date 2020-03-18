@@ -226,6 +226,11 @@ Introduction tutorial:\\
 \end{frame}
 
 
+\begin{frame}[fragile]{gitk - a simple GIT viewer}
+    \includegraphics[width=\textwidth]{images/gitk-screenshot-numpy.png}
+\end{frame}
+
+
 \begin{frame}{Merging two different versions of a file}
     \begin{center}
         \includegraphics[height=\textheight]{images/merge.pdf}
@@ -248,17 +253,21 @@ Introduction tutorial:\\
 \end{frame}
 
 
-%\begin{frame}[fragile]{Github}
-% TODO
-% https://github.com/inwe-boku/lecture-scientific-computing/
-% stars
-% watch
-% forks
-% readme
-% license
-% settings
-% actions
-%\end{frame}
+\begin{frame}[fragile]{Github}
+    Important things note on a
+    \href{https://github.com/inwe-boku/lecture-scientific-computing/}{github repoository webpage}:
+    \begin{itemize}
+        \item the \verb|README.md| should give a quick intro or more complete documentation
+        \item stars, watchers and forks and when the last commit are good indicators for quality
+        \item by the way: if you want, watch our repository to get mail notifications if some body
+            posts a question in the issue tracker
+            (\href{https://help.github.com/en/github/receiving-notifications-about-activity-on-github/about-notifications}{more about watching repositories})
+        \item repository settings: permissions, enable/disable features (bug tracker, wiki, ...)
+        \item license says how you are allowed to use the code
+        \item Github actions allow to run code (build jobs) on Githubs servers after each commit
+            (\href{https://github.com/inwe-boku/lecture-scientific-computing/actions/runs/57614853}{example})
+    \end{itemize}
+\end{frame}
 
 
 \begin{frame}[fragile]{GIT: Why?}
@@ -309,11 +318,16 @@ Introduction tutorial:\\
     \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{GIT is difficult... :(}
+    \includegraphics[width=0.87\textwidth]{images/xkcd-git-is-hard.pdf}
+    {\tiny Source:
+        \href{https://xkcd.com/1597kjA}{https://xkcd.com/1597}
+    }
+\end{frame}
+
 % TODO
-% GIT is terrible
-% xkcd
-% git man pages
-% link to svn is better than git
+% - add fake git man pages
+% - add link to svn is better than git
 
 \begin{frame}[fragile]{GIT terminology}
     \begin{itemize}
