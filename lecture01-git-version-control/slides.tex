@@ -129,4 +129,242 @@ Introduction tutorial:\\
 
 \end{frame}
 
+
+\section{GIT Version Control System}
+
+\begin{frame}[fragile]{GIT saves you if things go wrong}
+    \includegraphics[width=\textwidth]{images/git-insurance.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: Goals for today}
+    \begin{itemize}
+        \item understand why version control is essential for programming\pause
+        \item get an overview of what can be done using GIT\pause
+        \item be able to use GIT to collaborate with your group mates for the homework
+            assignments, understand basic terms and commands\pause
+        \begin{itemize}
+            \item repository
+            \item fork
+            \item configure collaborators in Github
+            \item \verb|git add|
+            \item \verb|git status|
+            \item \verb|git commit|
+            \item \verb|git push|
+            \item \verb|git pull|
+            \item use gitk and Github to display the commit history
+            \item use Github issues
+            \item solve merge conflicts
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{It's always a good idea to keep previous versions...! :)}
+    \includegraphics[width=\textwidth]{images/screenshot-ugly-filenames-1.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: Chronological order}
+    \includegraphics[width=\textwidth]{images/screenshot-ugly-filenames-2.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: Chronological order}
+    \includegraphics[width=\textwidth]{images/screenshot-ugly-filenames-3.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: Chronological order}
+    \includegraphics[width=\textwidth]{images/screenshot-ugly-filenames-4.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{gitk - a simple GIT viewer}
+    \includegraphics[width=\textwidth]{images/gitk-screenshot.png}
+\end{frame}
+
+
+\begin{frame}{Merging two different versions of a file}
+    \begin{center}
+        \includegraphics[height=\textheight]{images/merge.pdf}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]{git blame}
+    \includegraphics[width=\textwidth]{images/git-blame-screenshot.png}
+\end{frame}
+
+
+\begin{frame}[fragile]{git blame}
+    \begin{center}
+        % whut? why do we need 0.9 here?
+        \includegraphics[height=0.85\textheight]{images/git-blame2.jpg}
+    \end{center}
+    \vfill\pause
+    {\tiny Source: http://geek-and-poke.com/geekandpoke/2013/11/24/simply-explained}
+\end{frame}
+
+
+%\begin{frame}[fragile]{Github}
+% TODO
+% https://github.com/inwe-boku/lecture-scientific-computing/
+% stars
+% watch
+% forks
+% readme
+% license
+% settings
+% actions
+%\end{frame}
+
+
+\begin{frame}[fragile]{GIT: Why?}
+    \begin{itemize}
+        \item GIT as solution for versioning files\pause
+            \begin{itemize}
+                \item changes ("commits") can be reverted also individually
+                \item major versions (branches) can be maintained individually, changes (e.g. bug
+                    fixes) applied
+                \item versions can be used understand code or to find bugs (git blame, git bisect)
+            \end{itemize}
+            \pause
+        \item GIT as solution for collaboration\pause
+            \begin{itemize}
+                \item multiple developers can work on code at the same time independently and then
+                    merge changes into one version
+                \item work is split into readable and consistent parts, which allows code review by
+                    other developers
+            \end{itemize}
+            \pause
+        \item GIT for distributing software/code\pause
+            \begin{itemize}
+                \item Github is the main platform for hosting opensource code
+                \item libraries and applications can often be installed directly from Github
+                \item Github issues, Pull requests and stars allow interaction with the community
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: What?}
+    \begin{itemize}
+        \item versions are connected via a tree-like graph, each node is a commit (=one version of
+            the entire project)\pause
+        \item think of the commit as change ("patch") to the previous version, especially when
+            writing the commit message\pause
+        \item there are operations on the tree of commits: branch, rebase, cherry-pick, merge,
+            copy commits to/from Github (= push/pull)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT: How?}
+    \begin{itemize}
+        \item command line (that's how we will do it)
+        \item GUIs (e.g. gitk), IDE integration
+        \item API (eg. Python or commit sha1 on first page of slides)
+    \end{itemize}
+\end{frame}
+
+% TODO
+% GIT is terrible
+% xkcd
+% git man pages
+% link to svn is better than git
+
+\begin{frame}[fragile]{GIT terminology}
+    \begin{itemize}
+        \item version control system: a tool like GIT (alternatives: hg, SVN, ...)
+        \item repository: a folder with files under version control, the complete history is
+            stored in the subfolder \verb|.git|
+        \item commit: one version of the repository or equivalently the change made in this
+            version
+        \item commit message: a short message describing what has been changed in the commit
+            and if not obvious, why it was a good idea to change it
+        \item working directory (or working tree): the folder where files can be edited (don't
+            confuse it with the commit history, which is tree-like!)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Github: things to know}
+    \begin{itemize}
+        \item fork: copy a GIT repository from a Github account to your own account, typically in
+            order to get write permissions in the repository
+        \item pull request: ask the original owner to copy commits from the forked repository
+            back to the original repository
+        \item repository collaborators: to allow others to write to your repository,
+            invite them as collaborator via the Github webpage of the repository:\\
+            Settings/Manage access/Invite a collaborator
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{GIT commands}
+    \begin{itemize}
+        \item Copy a GIT repository from Github to your computer:\\
+            \verb|git clone https://github.com/lumbric/git-games/|
+        \item Add a new file to the repository:\\
+            \verb|git add path/to/file|
+        \item Commit a file, i.e. record the current version for the GIT history:
+            \verb|git commit path/to/file|
+        \item Which changes/files have not yet been committed:\\
+            \verb|git status|
+        \item Copy new commits from local machine to Github:\\
+            \verb|git push|
+        \item Copy new commits from Github to local machine:\\
+            \verb|git pull|
+    \end{itemize}
+\end{frame}
+
+%        \item use gitk and Github to display the commit history
+
+
+%\begin{frame}[fragile]{Bonus: Branches, merges and conflicts}
+% TODO
+%\end{frame}
+
+%\begin{frame}[fragile]{Bonus: GIT overview}
+% TODO
+%\end{frame}
+
+
+% TODO More bonus topics:
+% ohshitgit
+% - sha1 / hash
+% - .gitignore
+% - licenses
+% - git reset
+
+\section{Exercise}
+
+\begin{frame}[fragile]{Exercise}
+    \begin{itemize}
+        \item Go to \href{https://github.com/lumbric/git-games/}{https://github.com/lumbric/git-games/}
+        \item read the instructions in \verb|README.md| and choose a game (e.g. tic-tac-toe)
+        \item follow the instructions in the \verb|README.md| of the game you choose, e.g.
+            \href{https://github.com/lumbric/git-games/tree/master/tic-tac-toe#how-to-play}{Tic-tac-toe}
+
+    \end{itemize}
+\end{frame}
+
+
+\section{Homework assignment}
+
+\begin{frame}[fragile]{Homework assignment}
+    \begin{itemize}
+        \item decide one maintainer for each group
+        \item maintainer only: fork the exercise repository\\
+            \href{https://github.com/inwe-boku/homework-scientific-computing}{https://github.com/inwe-boku/homework-scientific-computing}
+        \item add other group members as collaborators to the forked repository in Github
+        \item one group member only: create a hello world program or some other simple file with
+            code or text file, add and commit it and push it
+        \item other group members: change something (e.g. add another print statement) and commit
+          the changes and push them to Github
+        \item bonus points if you manage to get a merge-conflict on purpose and resolve it correctly
+    \end{itemize}
+\end{frame}
+
 \end{document}
