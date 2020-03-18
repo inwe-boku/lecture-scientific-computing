@@ -254,7 +254,11 @@ Introduction tutorial:\\
     {\tiny Source: http://geek-and-poke.com/geekandpoke/2013/11/24/simply-explained}
 \end{frame}
 
-% TODO add git-bisect?
+
+\begin{frame}[fragile]{Github more popular than GIT}
+    \includegraphics[width=\textwidth]{images/git-bisect.pdf}
+\end{frame}
+
 
 \begin{frame}[fragile]{Github more popular than GIT}
     \includegraphics[width=\textwidth]{images/github-more-popular-than-git.pdf}
@@ -397,13 +401,35 @@ Introduction tutorial:\\
 \end{frame}
 
 
-% TODO
-%\begin{frame}[fragile]{Bonus: Branches, merges and conflicts}
-%    \begin{itemize}
-%        \item
-%        \item
-%    \end{itemize}
-%\end{frame}
+\begin{frame}[fragile]{Discuss questions collected as homework}
+
+    Questions in etherpad:\\
+    \href{https://yourpart.eu/p/lecture-scientific-computing}{https://yourpart.eu/p/lecture-scientific-computing}
+\end{frame}
+
+
+\begin{frame}[fragile]{Bonus: Branches, merges and conflicts}
+    \includegraphics[width=\textwidth]{images/merging-diagram.pdf}
+\end{frame}
+
+\begin{frame}[fragile]{Bonus: Merge conflicts}
+    \begin{itemize}
+        \item You run \verb|git pull| or \verb|git merge| or \verb|git rebase| and then see the error:
+            {\small
+            \begin{verbatim}CONFLICT (content): Merge conflict in example.py
+Automatic merge failed; fix conflicts and then commit the result.\end{verbatim}\pause
+            }
+        \item Look for lines like these in \verb|example.py|:
+\begin{verbatim}
+<<<<<<< HEAD
+some change
+=======
+some other change
+>>>>>>> other\end{verbatim}
+        \item edit the file, delete the markers and the parts you don't need\pause
+        \item run \verb|git add example.py| and \verb|git commit|
+    \end{itemize}
+\end{frame}
 
 
 \begin{frame}[fragile]{Bonus: GIT workflow}
