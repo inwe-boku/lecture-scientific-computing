@@ -7,6 +7,15 @@ Git Handbook by GitHub:
 Cheeat sheet by GitLab:
     https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 
+An Intro to Git and GitHub for Beginners:
+   https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+Getting started with Git and GitHub: the complete beginner’s guide:
+   https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6
+
+Learn the Basics of Git in Under 10 Minutes
+   https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
+
 A couple of good tutorials about GIT by Github
     https://www.youtube.com/githubguides
 
