@@ -28,7 +28,8 @@
             \begin{itemize}
                 \item Conda (Homework: encrypted mapping from Github account to real Name)
                 \item Python (Homework: \#flattenthecurve - by the way: please stay home!)
-            \end{itemize}
+            \end{itemize}\pause
+        \item Homework - anybody wants to present?
     \end{itemize}
 \end{frame}
 
@@ -182,6 +183,7 @@ Introduction tutorial:\\
         \end{itemize}
 
         \pause
+        \bigskip
         There may be a bit of bonus content if time permits.
     \end{itemize}
 \end{frame}
@@ -253,9 +255,13 @@ Introduction tutorial:\\
 \end{frame}
 
 
+\begin{frame}[fragile]{Github more popular than GIT}
+    \includegraphics[width=\textwidth]{images/github-more-popular-than-git.pdf}
+\end{frame}
+
+
 \begin{frame}[fragile]{Github}
-    Important things note on a
-    \href{https://github.com/inwe-boku/lecture-scientific-computing/}{github repoository webpage}:
+    Some things worth noting about a \href{https://github.com/inwe-boku/lecture-scientific-computing/}{github repoository webpage}:
     \begin{itemize}
         \item the \verb|README.md| should give a quick intro or more complete documentation
         \item stars, watchers and forks and when the last commit are good indicators for quality
@@ -267,6 +273,11 @@ Introduction tutorial:\\
         \item Github actions allow to run code (build jobs) on Githubs servers after each commit
             (\href{https://github.com/inwe-boku/lecture-scientific-computing/actions/runs/57614853}{example})
     \end{itemize}
+
+    \pause
+    \bigskip
+    Example user page:\\
+    \href{https://github.com/gvanrossum}{https://github.com/gvanrossum}
 \end{frame}
 
 
@@ -374,12 +385,24 @@ Introduction tutorial:\\
     \end{itemize}
 \end{frame}
 
-%        \item use gitk and Github to display the commit history
+
+\begin{frame}[fragile]{GIT display changes}
+    \begin{itemize}
+        \item gitk has a nice tree viewer, but looks a bit old fashioned
+        \item Github has a nice web interface, but no tree viewer
+        \item on the command line use \verb|git show| or \verb|git diff|
+    \end{itemize}
+\end{frame}
 
 
-%\begin{frame}[fragile]{Bonus: Branches, merges and conflicts}
 % TODO
+%\begin{frame}[fragile]{Bonus: Branches, merges and conflicts}
+%    \begin{itemize}
+%        \item
+%        \item
+%    \end{itemize}
 %\end{frame}
+
 
 \begin{frame}[fragile]{Bonus: GIT workflow}
     \includegraphics[width=\textwidth]{images/git-workflow.pdf}
@@ -393,12 +416,18 @@ Introduction tutorial:\\
 \end{frame}
 
 
-% TODO More bonus topics:
-% ohshitgit
-% - sha1 / hash
-% - .gitignore
-% - licenses
-% - git reset
+\begin{frame}[fragile]{Bonus: More topics}
+    Also good to know, but probably beyond the scope of this lecture today...
+    \begin{itemize}
+        \item what is the GIT sha1 / hash?
+        \item licenses and open source
+        \item the \verb|.gitignore| file
+        \item different ways of reverting, see also \href{https://ohshitgit.com/}{ohshitgit.com}
+        \item what does \verb|git add| actually do?
+        \item how does a pull request work exactly?
+    \end{itemize}
+\end{frame}
+
 
 \section{Exercise}
 
