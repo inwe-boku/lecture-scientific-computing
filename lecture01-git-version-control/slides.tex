@@ -47,7 +47,7 @@
 
 \begin{frame}[fragile]{What is a command line?}
     A command line is a computer interface, which allows you to type commands with parameters
-    and to receive text output:\\
+    and to receive text output\pause:\\
 
     Type something like:
     \begin{verbatim}
@@ -66,11 +66,11 @@
 \begin{frame}[fragile]{Command line: Syntax}
 
     \begin{itemize}
-        \item Command and all parameters are space-separated
+        \item Command and all parameters are space-separated\pause
         \item Parameters containing spaces (e.g. file paths) need to be wrapped in double or single
             quotes:
             \begin{verbatim}
-    ls "path/to a folder with spaces/subfolder"\end{verbatim}
+    ls "path/to a folder with spaces/subfolder"\end{verbatim}\pause
         \item There are different standard forms of parameters:
         \begin{itemize}
             \item \verb|command parameter|
@@ -88,11 +88,11 @@
 \begin{frame}[fragile]{File and folder paths}
     \begin{itemize}
         \item {\bf working directory:} when using a terminal, you are always working in a
-            directory, similar to opening a folder in a file browser
+            directory, similar to opening a folder in a file browser\pause
         \item {\bf absolute file paths} start with \verb|/| (Linux, Mac OS) or something like \verb|C:\|
             (Windows), example:
             {\small
-            \begin{verbatim}ls /home/peter/lecture-scientific-computing/README.md \end{verbatim}}
+            \begin{verbatim}ls /home/peter/lecture-scientific-computing/README.md\end{verbatim}}\pause
         \item {\bf relative paths} are relative to the current working directory of the terminal (with some few unimportant exceptions), example:
             {\small
             \begin{verbatim}ls lecture-scientific-computing/README.md\end{verbatim}}
@@ -105,9 +105,9 @@
         \item print working directory
 \begin{verbatim}$ pwd
 /home/peter
-\end{verbatim}
+\end{verbatim}\pause
         \item change (working) directory
-\begin{verbatim}$ cd path/to/folder\end{verbatim}
+\begin{verbatim}$ cd path/to/folder\end{verbatim}\pause
         \item \verb|ls -l| list directory content
 \begin{verbatim}$ ls -l
 -rw-rw-r-- 1 peter peter 2,0K Aug  3  2009 book_1.docx
@@ -120,11 +120,11 @@
 \begin{frame}[fragile]{Helpful tricks}
     \begin{itemize}
         \item abort a running command:
-            \begin{verbatim}CTRL + C\end{verbatim}
+            \begin{verbatim}CTRL + C\end{verbatim}\pause
         \item hitting the TAB key auto-completes your command in many situations, e.g.:
-            \begin{verbatim}ls path/to/fol<TAB>\end{verbatim}
+            \begin{verbatim}ls path/to/fol<TAB>\end{verbatim}\pause
         \item previously run commands can be accessed using cursor keys or search:
-            \begin{verbatim}CTRL + R\end{verbatim}
+            \begin{verbatim}CTRL + R\end{verbatim}\pause
         \item run command in background using a trailing \verb|&|, useful for running gitk:
             \begin{verbatim}gitk&\end{verbatim}
     \end{itemize}
