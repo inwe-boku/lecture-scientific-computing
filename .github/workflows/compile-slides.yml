@@ -34,6 +34,18 @@ jobs:
           name: lecture00-introduction.pdf
           path: lecture00-introduction/slides.pdf
 
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        working_directory: lecture01-git-version-control
+        root_file: slides.tex
+
+    - name: Upload slides as artefact
+      uses: actions/upload-artifact@v1
+      with:
+          name: lecture01-git-version-control.pdf
+          path: lecture01-git-version-control/slides.pdf
+
 #    - name: Commit PDF files
 #      run: |
 #        git config --local user.email "action@github.com"
