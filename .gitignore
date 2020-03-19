@@ -47,6 +47,9 @@ coverage.xml
 *.snm
 *.nav
 *.run.xml
+*.vbr
+*.out
+*.synctex.gz
 
 slides.out
 slides.fls
