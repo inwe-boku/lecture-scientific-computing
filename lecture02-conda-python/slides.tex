@@ -157,18 +157,37 @@
 		\begin{verbatim}
 		jupyter notebook
 		\end{verbatim}
-		This will start the Jupyter Notebook server within the current working directory. An URL is printed to the screen which can be copied to your favourite Browser.
+		This will start the Jupyter Notebook server within the current working directory and starts a browser.
 		
-		If you want to use conda environments in your notebooks, ensure that $ipykernel$ is installed in your environment.
+		If you want to use conda environments in your notebooks, do the following:
+		\begin{itemize}
+			\item Install \textit{ipykernel} in your environment
+		
 		\begin{verbatim}
+		conda activate <conda-environment>
 		conda install ipykernel
+		conda deactivate
 		\end{verbatim}
-		For each conda environment that should be visible, do the following:
+		\item Additionally, install \textit{nb\_conda\_kernels} in \textit{base} if you run your jupyter notebook from base:
 		\begin{verbatim}
-		 python -m ipykernel install --user --name <name-of-environment> 
-		 --display-name "Name shown in jupyter notebook"
+conda activate base    # could be also some other environment
+conda install nb_conda_kernels
 		 \end{verbatim}
+		\end{itemize}
 		
+\end{frame}
+
+\begin{frame}[fragile]{Standard Browser and Jupyter Notebooks}
+	
+	jupyter notebook may start with an unwanted Browser. Two things you should try:
+	\begin{itemize}
+		\item Set your desired Browser as Standard Browser in Windows Settings (Control Panel - Apps - Default Browser)
+		\item try
+			\begin{verbatim}
+		git config --global web.browser google-chrome	\end{verbatim}
+		
+	\end{itemize}
+	
 \end{frame}
 
 % how to use jupyter as a calculator
