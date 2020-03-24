@@ -22,105 +22,101 @@
 \end{frame}
 
 \begin{frame}{Download...}
-	
+
 	Please download Anaconda from
-	
 	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}\\
-	
-	
 	
 \end{frame}
 
 \begin{frame}{Package and Environment Manager}
 	\begin{itemize}
-		
 		\item A package (library or application) is a collection of code that helps you accomplish tasks. Be aware that a conda package may be a complete standalone application independent from Python. In this class, when we refer to a conda package, this is almost identical to refering to the respective Python package.
 		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later! 
 		\item A package and environment  manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package, downloads all packages and installs them.
 		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean seperation between projects. (But also means that you may have installed Python many times on your computer)
 		\item To make things more complicated: a conda package is not a python package...
 	\end{itemize}
-	
+
 \end{frame}
 
 
 \begin{frame}{Package Manager of our choice}
-	
+
 	\begin{itemize}
 		\item We are going to use conda as package manager. 
 		\item Anaconda is a system that packages a lot of software together with conda and runs on Windows and Linux. It also has a graphical user interface. In class, we use the command line only. Anaconda provides a lot of software, also for R, you may explore it by starting the graphical user interface. (we do not dig deeper here).
 		\item Miniconda is an alternative to use conda. It is smaller and just comes with the core libraries which are necessary to use conda.
-		
+
 	\end{itemize}
-	
-	
+
+
 \end{frame}
 
 \begin{frame}[fragile]{Anaconda installation}
-		
+
 		\begin{itemize}
 		\item Run setup program
 		\item When asked check the checkbox to set the PATH variable
 		\item Open git bash and type
-		
+
 		\begin{verbatim}
 			conda init bash
 		\end{verbatim}
 		\item If this works, you successfully installed conda!
-		
+
 		\end{itemize}
-		
+
 \end{frame}
 
 \begin{frame}[fragile]{Using conda environments}
-	
+
 	\begin{itemize}
 		\item A conda environment allows you to install a seperate version of Python (or any other conda supported software) with associated packages
-		
+
 		\item List all available environments
 		\begin{verbatim}
 		conda env list
 		\end{verbatim}
-		
+
 		\item There should be a $base$ environment available on all installations. It is automatically activated when you use conda!
 		\item We now first use conda to $update$ - conda!
 		\begin{verbatim}
 		conda update conda
 		\end{verbatim}
 		\item This will download and install the newest version of conda
-	
+
 	\end{itemize}
-	
+
 \end{frame}
 
 \begin{frame}[fragile]{Creating and activating environments}
-	
+
 	\begin{itemize}
 		\item You can create a new Python environment with this command
 		\begin{verbatim}
 		conda create -n <environment-name> python=3.7 anaconda
 		\end{verbatim}
-		
-		\item \textit{<environment-name>} can be chosen by you. We use \textit{scientific-computing}: 
+
+		\item \textit{<environment-name>} can be chosen by you. We use \textit{scientific-computing}:
 		\begin{verbatim}
 			conda create -n scientific-computing python=3.7 anaconda
-		
+
 		\end{verbatim}
-		
+
 		\item Again list all available environments
 			\begin{verbatim}
 			conda env list
 			\end{verbatim}
 		\item There should be an environment \textit{scientific-computing} available now.
-		\item How to work with it? 
+		\item How to work with it?
 		\begin{verbatim}
 		conda activate scientific-computing
 		\end{verbatim}
 		\item Observe how the bash changes - \textit{(scientific-computing)} is shown on the command line now!
-		\item Not activating the correct environment is a very common source of problems! Check your environment! 
-		
+		\item Not activating the correct environment is a very common source of problems! Check your environment!
+
 	\end{itemize}
-	
+
 \end{frame}
 
 % anaconda vs miniconda
@@ -130,16 +126,16 @@
 \section{Jupyter}
 
 \begin{frame}{What is a Juypter Notebook?}
-	
+
 	\begin{itemize}
 		\item In principle, you can write your code in any test editor and then run it on the command line
 		\item A much better option would be to use an integrated development environment (IDE) such as pyCharm. (Syntax highlighting, code linting, etc.)
 		\item A different form of coding environment are so called \textit{Jupyter Notebooks}
 		\item Here, the code is written on a webpage, sent to a server, executed there, and results are displayed in the notebook again.
-	
-	\end{itemize}	
-	
-	
+
+	\end{itemize}
+
+
 \end{frame}
 
 \begin{frame}{Pros \& Cons of Jupyter Notebooks}
@@ -147,22 +143,22 @@
 \begin{itemize}
 		\item Advantages
 	\begin{itemize}
-		\item Integration of code and visualization of results: for data analysis crucial. 
+		\item Integration of code and visualization of results: for data analysis crucial.
 		\item Interactive environment for data assessment: data (variables, objects, libraries) stay in memory and code can be dynamically adapted (Similar to R)
 		\item Code an be run on server with large computational capacity (if available)
-				
+
 	\end{itemize}
 	\item Disadvantages
 	\begin{itemize}
-		\item Managing large junks of code (such as functions) becomes complicated. 
-		\item Using Jupyter notebooks with version control is difficult, as they introduce their own XML-syntax, which is not really human readable. 
-		\item Interactive session: very error-prone, as objects and variables can change their state depending e.g. on the number of times a certain cell is executed.		
+		\item Managing large junks of code (such as functions) becomes complicated.
+		\item Using Jupyter notebooks with version control is difficult, as they introduce their own XML-syntax, which is not really human readable.
+		\item Interactive session: very error-prone, as objects and variables can change their state depending e.g. on the number of times a certain cell is executed.
 	\end{itemize}
 
 	\item Best of two worlds: use an IDE to manage your stable code (functions etc.) and use notebooks for exploration.
 	\item For teaching purposes, notebooks are VERY useful. We are going to use them therefore - and may, at some point, introduce additional software such as an IDE.
-\end{itemize}	
-	
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}[fragile]{Using Jupyter Notebooks}
@@ -193,7 +189,6 @@ conda activate base    # could be also some other environment
 conda install nb_conda_kernels
 		 \end{verbatim}
 		\end{itemize}
-		
 \end{frame}
 
 \begin{frame}[fragile]{Standard Browser and Jupyter Notebooks}
@@ -228,7 +223,7 @@ conda install nb_conda_kernels
 \section{Homework assignment}
 
 \begin{frame}{Assignment (I)}
-	
+
 	\begin{itemize}
 		\item If you haven't done so yet, fork the homework repository at https://github.com/inwe-boku/homework-scientific-computing
 		\item You may have to fetch the latest changes to your repo
@@ -237,43 +232,39 @@ conda install nb_conda_kernels
 		\item The filename of the encrypted file should be \textit{group-<name of group>} \textit{<name of group>} is your self-chosen group name.
 		\item Use the Python code on the next slides to accomplish this task.
 		\item Add the encrypted file to your repository, commit the change, and push it to your fork.
-		
-		
 	\end{itemize}
-	
-	
+
+
 \end{frame}
 
 \begin{frame}[fragile]{Assignment (II)}
-	
+
 	\begin{verbatim}
 	### code to encrypt your data with our public key
-	
+
 	# imports - if they do not work,
 	# install package cryptography with conda
 	from cryptography.hazmat.backends import default_backend
 	from cryptography.hazmat.primitives import serialization
 	from cryptography.hazmat.primitives import hashes
 	from cryptography.hazmat.primitives.asymmetric import padding
-	
+
 	with open("public_key.pem", "rb") as key_file:
 	    public_key = serialization.load_pem_public_key(
 	                 key_file.read(),
 	                 backend=default_backend())
-		
+
 	group_members = (b"""First Last;1234565;nickname
     First Last;1234565;nickname""")
-	
-	
 	\end{verbatim}
-	
+
 \end{frame}
 
 \begin{frame}[fragile]{Assignment (III)}
-	
+
 	\begin{verbatim}
-	
-	
+
+
 	encrypted = public_key.encrypt(
                 group_members,
                 padding.OAEP(
@@ -289,7 +280,7 @@ conda install nb_conda_kernels
 		f.close()
 	
 	\end{verbatim}
-	
+
 	\end{frame}
 
 \end{document}
