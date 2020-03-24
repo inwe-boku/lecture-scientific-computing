@@ -14,18 +14,22 @@
 	
 	Please download Anaconda from
 	
-	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}
+	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}\\
+	
+	And a hint:
+	\href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class!}
 	
 	
 \end{frame}
 
-\begin{frame}{Package Manager}
+\begin{frame}{Package and Environment Manager}
 	\begin{itemize}
 		
 		\item A package (or library in other languages) is a collection of code that helps you accomplish tasks. In this class, when we refer to a package, we refer to Python packages. But be aware that a package, in particular under Linux, may be a complete standalone application.
 		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later! 
-		\item A package manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package.
+		\item A package and environment  manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package, downloads all packages and installs them.
 		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean seperation between projects. (But also means that you may have installed Python many times on your computer)
+		\item To make things more complicated: a conda package is not a python package...
 	\end{itemize}
 	
 \end{frame}
@@ -119,7 +123,7 @@
 \begin{frame}{What is a Juypter Notebook?}
 	
 	\begin{itemize}
-		\item In principle, you can write your code in Windows notepad and then run it on the command line
+		\item In principle, you can write your code in any test editor and then run it on the command line
 		\item A much better option would be to use an integrated development environment (IDE) such as pyCharm. (Syntax highlighting, code linting, etc.)
 		\item A different form of coding environment are so called \textit{Jupyter Notebooks}
 		\item Here, the code is written on a webpage, sent to a server, executed there, and results are displayed in the notebook again.
@@ -155,9 +159,15 @@
 \begin{frame}[fragile]{Using Jupyter Notebooks}
 		In git bash, type
 		\begin{verbatim}
-		jupyter notebook
+		jupyter notebook &
 		\end{verbatim}
-		This will start the Jupyter Notebook server within the current working directory and starts a browser.
+		This will start the Jupyter Notebook server within the current working directory as a background process and starts a browser.
+		
+		To stop it type
+		\begin{verbatim}
+		fg
+		CTRL-C
+		\end{verbatim}
 		
 		If you want to use conda environments in your notebooks, do the following:
 		\begin{itemize}
