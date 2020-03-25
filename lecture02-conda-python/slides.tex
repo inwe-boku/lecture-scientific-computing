@@ -226,64 +226,70 @@ conda install nb_conda_kernels
 
 \section{Homework assignment}
 
-\begin{frame}{Assignment (I)}
+\begin{frame}[fragile]{Homework assignment (I)}
 
 	\begin{itemize}
-		\item If you haven't done so yet, fork the homework repository at https://github.com/inwe-boku/homework-scientific-computing
-		\item You may have to fetch the latest changes to your repo
-		\item Install conda and jupyter lab on your computer, run jupyter lab in the directory of the forked repository
-		\item Use Python to create an encrypted file with the full name of the team member, the registration number (Matrikelnummer), and the git username. For that purpose, use the public key \textit{public\_key.pem} stored in the homework repository in \textit{homework02-conda-python}
-		\item The filename of the encrypted file should be \textit{group-<name of group>} \textit{<name of group>} is your self-chosen group name.
+		\item During your last homework assignment, one of your team members forked the homework repository:\\
+            https://github.com/inwe-boku/homework-scientific-computing
+		\item Fetch the latest changes from the upstream:
+            {\scriptsize
+            \begin{verbatim}
+cd path/to/homework-scientific-computing
+git remote add upstream https://github.com/inwe-boku/homework-scientific-computing/
+git pull --no-edit upstream master\end{verbatim}
+            }
+		\item Install conda and Jupyter and the package cryptography on your computer, run Jupyter in the directory of the
+            forked repository.
+		\item Create a new Notebook and use Python to create an encrypted file with your full name, the registration number (Matrikelnummer), and the git username. For that purpose, use the public key \textit{public\_key.pem} stored in the homework repository in \textit{homework02-conda-python}
+		\item The filename of the encrypted file should be
+            \textit{group-member-<github-account-name>}, where \textit{<github-account-name>} is
+            your Github name.
 		\item Use the Python code on the next slides to accomplish this task.
-		\item Add the encrypted file to your repository, commit the change, and push it to your fork.
+		\item Add the encrypted file to your repository, commit the change, and push it to your
+            fork (no pull request).
 	\end{itemize}
 
 
 \end{frame}
 
-\begin{frame}[fragile]{Assignment (II)}
+\begin{frame}[fragile]{Homework assignment (II)}
 
 	\begin{verbatim}
-	### code to encrypt your data with our public key
+"""Store personal data encrypted with our public key."""
 
-	# imports - if they do not work,
-	# install package cryptography with conda
-	from cryptography.hazmat.backends import default_backend
-	from cryptography.hazmat.primitives import serialization
-	from cryptography.hazmat.primitives import hashes
-	from cryptography.hazmat.primitives.asymmetric import padding
+# if you get an ImportError, you missed to install
+# the package cryptography with conda
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import padding
 
-	with open("public_key.pem", "rb") as key_file:
-	    public_key = serialization.load_pem_public_key(
-	                 key_file.read(),
-	                 backend=default_backend())
+# open and read the public key
+with open("public_key.pem", "rb") as key_file:
+    public_key = serialization.load_pem_public_key(
+        key_file.read(), backend=default_backend()
+        )
 
-	group_members = (b"""First Last;1234565;nickname
-    First Last;1234565;nickname""")
+name_mapping = b"First Last;1234565;nickname"
 	\end{verbatim}
 
 \end{frame}
 
-\begin{frame}[fragile]{Assignment (III)}
+\begin{frame}[fragile]{Homework assignment (III)}
 
 	\begin{verbatim}
+encrypted = public_key.encrypt(
+    name_mapping,
+    padding.OAEP(
+    mgf=padding.MGF1(algorithm=hashes.SHA256()),
+    algorithm=hashes.SHA256(),
+    label=None))
 
+# change this to your github account name!
+filename = "group-member-<github-account-name>.txt"
 
-	encrypted = public_key.encrypt(
-                group_members,
-                padding.OAEP(
-                mgf=padding.MGF1(algorithm=hashes.SHA256()),
-                algorithm=hashes.SHA256(),
-                label=None))
-
-	filename = "group-members.txt"
-
-	with(open(filename, 'wb') as f):
-
-		f.write(encrypted)
-		f.close()
-
-	\end{verbatim}
+with open(filename, 'wb') as f:
+    f.write(encrypted)\end{verbatim}
 
 	\end{frame}
 
