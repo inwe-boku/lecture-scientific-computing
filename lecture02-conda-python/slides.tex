@@ -7,34 +7,39 @@
 	\tableofcontents
 \end{frame}
 
-\section{Conda}
 
-\begin{frame}{Organization}
-	
+\section{Organizational matters}
+\begin{frame}[fragile]{Organizational matters}
+
 	\begin{itemize}
-		\item Please help writing today's lecture notes at XXX 
+		\item Please participate in writing today's lecture notes:
+            \href{https://yourpart.eu/p/lecture-scientific-computing02-notes}{https://yourpart.eu/p/lecture-scientific-computing02-notes}\pause
+        \item Let's also try to write a glossary of new terms:\\
+            \href{https://yourpart.eu/p/lecture-scientific-computing-glossary}{https://yourpart.eu/p/lecture-scientific-computing-glossary}
 		\item Grading
 			\begin{itemize}
 				\item Do your homework in your group! We'll check repositories.
-				\item Grading: Present at least once in the online lecture - either a homework exercise or a lecture exercise.
+				\item Grading: Presentation at least once in the online lecture - either a homework exercise or a lecture exercise.
 			\end{itemize}
 	\end{itemize}
 \end{frame}
 
+\section{Conda}
 \begin{frame}{Download...}
 
-	Please download Anaconda from
+	Please download Anaconda from\\
 	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}\\
-	
+
 \end{frame}
 
-\begin{frame}{Package and Environment Manager}
+\begin{frame}[fragile]{Package manager and Environments}
 	\begin{itemize}
-		\item A package (library or application) is a collection of code that helps you accomplish tasks. Be aware that a conda package may be a complete standalone application independent from Python. In this class, when we refer to a conda package, this is almost identical to refering to the respective Python package.
-		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later! 
-		\item A package and environment  manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package, downloads all packages and installs them.
-		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean seperation between projects. (But also means that you may have installed Python many times on your computer)
-		\item To make things more complicated: a conda package is not a python package...
+		\item A package (library or application) is a collection of code that helps you accomplish
+            tasks (a bit similar to the \verb|setup.exe| in Windows).
+		\item There are e.g. packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later!
+		\item A package manager is a convenient way to install software: it resolves all
+            dependencies (=other packages needed by the package you want to install), downloads all packages and installs them.
+		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean separation between projects. (But also means that you may have installed Python many times on your computer)
 	\end{itemize}
 
 \end{frame}
@@ -43,9 +48,9 @@
 \begin{frame}{Package Manager of our choice}
 
 	\begin{itemize}
-		\item We are going to use conda as package manager. 
+		\item We are going to use conda as package manager.
 		\item Anaconda is a system that packages a lot of software together with conda and runs on Windows and Linux. It also has a graphical user interface. In class, we use the command line only. Anaconda provides a lot of software, also for R, you may explore it by starting the graphical user interface. (we do not dig deeper here).
-		\item Miniconda is an alternative to use conda. It is smaller and just comes with the core libraries which are necessary to use conda.
+		\item Miniconda is an alternative to Anaconda. It is smaller and just comes with the core libraries which are necessary to use conda.
 
 	\end{itemize}
 
@@ -71,7 +76,7 @@
 \begin{frame}[fragile]{Using conda environments}
 
 	\begin{itemize}
-		\item A conda environment allows you to install a seperate version of Python (or any other conda supported software) with associated packages
+		\item A conda environment allows you to install a separate version of Python (or any other conda supported software) with associated packages
 
 		\item List all available environments
 		\begin{verbatim}
@@ -112,7 +117,8 @@
 		\begin{verbatim}
 		conda activate scientific-computing
 		\end{verbatim}
-		\item Observe how the bash changes - \textit{(scientific-computing)} is shown on the command line now!
+		\item Observe how the command line indicates the active environment:
+            \textit{(scientific-computing)} is now displayed
 		\item Not activating the correct environment is a very common source of problems! Check your environment!
 
 	\end{itemize}
@@ -129,9 +135,10 @@
 
 	\begin{itemize}
 		\item In principle, you can write your code in any test editor and then run it on the command line
-		\item A much better option would be to use an integrated development environment (IDE) such as pyCharm. (Syntax highlighting, code linting, etc.)
+		\item A much better option would be to use an integrated development environment (IDE) such
+            as PyCharm (syntax highlighting, code linting, etc.).
 		\item A different form of coding environment are so called \textit{Jupyter Notebooks}
-		\item Here, the code is written on a webpage, sent to a server, executed there, and results are displayed in the notebook again.
+		\item Here, the code is written in the web browser, sent to a server, executed there, and results are displayed in the notebook again.
 
 	\end{itemize}
 
@@ -164,20 +171,19 @@
 \begin{frame}[fragile]{Using Jupyter Notebooks}
 		In git bash, type
 		\begin{verbatim}
-		jupyter notebook &
+		jupyter notebook
 		\end{verbatim}
 		This will start the Jupyter Notebook server within the current working directory as a background process and starts a browser.
-		
+
 		To stop it type
 		\begin{verbatim}
-		fg
 		CTRL-C
 		\end{verbatim}
-		
+
 		If you want to use conda environments in your notebooks, do the following:
 		\begin{itemize}
 			\item Install \textit{ipykernel} in your environment
-		
+
 		\begin{verbatim}
 		conda activate <conda-environment>
 		conda install ipykernel
@@ -192,29 +198,29 @@ conda install nb_conda_kernels
 \end{frame}
 
 \begin{frame}[fragile]{Standard Browser and Jupyter Notebooks}
-	
+
 	jupyter notebook may start with an unwanted Browser. Two things you should try:
 	\begin{itemize}
 		\item Set your desired Browser as Standard Browser in Windows Settings (Control Panel - Apps - Default Browser)
 		\item try
 			\begin{verbatim}
 		git config --global web.browser google-chrome	\end{verbatim}
-		
+
 	\end{itemize}
-	
+
 \end{frame}
 
 \begin{frame}{Some interesting links}
 	\begin{itemize}
-		\item \href{https://www.edureka.co/blog/wp-content/uploads/2018/10/Jupyter_Notebook_CheatSheet_Edureka.pdf}{jupyter notebook Cheatsheet}
+		\item \href{https://www.edureka.co/blog/wp-content/uploads/2018/10/Jupyter_Notebook_CheatSheet_Edureka.pdf}{Jupyter notebook cheatsheet}
 
-		\item \href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class!}
-		
+		\item \href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class}
+
 		\item \href{https://docs.python-guide.org/}{The Hitchhiker's Guide to Python}
-			
+
 	\end{itemize}
 
-	
+
 \end{frame}
 
 % how to use jupyter as a calculator
@@ -222,64 +228,70 @@ conda install nb_conda_kernels
 
 \section{Homework assignment}
 
-\begin{frame}{Assignment (I)}
+\begin{frame}[fragile]{Homework assignment (I)}
 
 	\begin{itemize}
-		\item If you haven't done so yet, fork the homework repository at https://github.com/inwe-boku/homework-scientific-computing
-		\item You may have to fetch the latest changes to your repo
-		\item Install conda and jupyter lab on your computer, run jupyter lab in the directory of the forked repository
-		\item Use Python to create an encrypted file with the full name of the team member, the registration number (Matrikelnummer), and the git username. For that purpose, use the public key \textit{public\_key.pem} stored in the homework repository in \textit{homework02-conda-python}
-		\item The filename of the encrypted file should be \textit{group-<name of group>} \textit{<name of group>} is your self-chosen group name.
+		\item During your last homework assignment, one of your team members forked the homework repository:\\
+            https://github.com/inwe-boku/homework-scientific-computing
+		\item Fetch the latest changes from the upstream:
+            {\scriptsize
+            \begin{verbatim}
+cd path/to/homework-scientific-computing
+git remote add upstream https://github.com/inwe-boku/homework-scientific-computing/
+git pull --no-edit upstream master\end{verbatim}
+            }
+		\item Install conda and Jupyter on your computer, run Jupyter in the directory of the
+            forked repository.
+		\item Create a new Notebook and use Python to create an encrypted file with your full name, the registration number (Matrikelnummer), and the git username. For that purpose, use the public key \textit{public\_key.pem} stored in the homework repository in \textit{homework02-conda-python}
+		\item The filename of the encrypted file should be
+            \textit{group-member-<github-account-name>}, where \textit{<github-account-name>} is
+            your Github name.
 		\item Use the Python code on the next slides to accomplish this task.
-		\item Add the encrypted file to your repository, commit the change, and push it to your fork.
+		\item Add the encrypted file to your repository, commit the change, and push it to your
+            fork (no pull request).
 	\end{itemize}
 
 
 \end{frame}
 
-\begin{frame}[fragile]{Assignment (II)}
+\begin{frame}[fragile]{Homework assignment (II)}
 
 	\begin{verbatim}
-	### code to encrypt your data with our public key
+"""Store personal data encrypted with our public key."""
 
-	# imports - if they do not work,
-	# install package cryptography with conda
-	from cryptography.hazmat.backends import default_backend
-	from cryptography.hazmat.primitives import serialization
-	from cryptography.hazmat.primitives import hashes
-	from cryptography.hazmat.primitives.asymmetric import padding
+# if you get an ImportError, you missed to install
+# the package cryptography with conda
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import padding
 
-	with open("public_key.pem", "rb") as key_file:
-	    public_key = serialization.load_pem_public_key(
-	                 key_file.read(),
-	                 backend=default_backend())
+# open and read the public key
+with open("public_key.pem", "rb") as key_file:
+    public_key = serialization.load_pem_public_key(
+        key_file.read(), backend=default_backend()
+        )
 
-	group_members = (b"""First Last;1234565;nickname
-    First Last;1234565;nickname""")
+name_mapping = b"First Last;1234565;nickname"
 	\end{verbatim}
 
 \end{frame}
 
-\begin{frame}[fragile]{Assignment (III)}
+\begin{frame}[fragile]{Homework assignment (III)}
 
 	\begin{verbatim}
+encrypted = public_key.encrypt(
+    name_mapping,
+    padding.OAEP(
+    mgf=padding.MGF1(algorithm=hashes.SHA256()),
+    algorithm=hashes.SHA256(),
+    label=None))
 
+# change this to your github account name!
+filename = "group-member-<github-account-name>.txt"
 
-	encrypted = public_key.encrypt(
-                group_members,
-                padding.OAEP(
-                mgf=padding.MGF1(algorithm=hashes.SHA256()),
-                algorithm=hashes.SHA256(),
-                label=None))
-	
-	filename = "group-members.txt"
-	
-	with(open(filename, 'wb') as f):
-	
-		f.write(encrypted)
-		f.close()
-	
-	\end{verbatim}
+with open(filename, 'wb') as f:
+    f.write(encrypted)\end{verbatim}
 
 	\end{frame}
 
