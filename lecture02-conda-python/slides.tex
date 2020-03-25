@@ -17,7 +17,7 @@
 		\item Grading
 			\begin{itemize}
 				\item Do your homework in your group! We'll check repositories.
-				\item Grading: Present at least once in the online lecture - either a homework exercise or a lecture exercise.
+				\item Grading: Presentation at least once in the online lecture - either a homework exercise or a lecture exercise.
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -25,18 +25,19 @@
 \section{Conda}
 \begin{frame}{Download...}
 
-	Please download Anaconda from
+	Please download Anaconda from\\
 	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}\\
 
 \end{frame}
 
-\begin{frame}{Package and Environment Manager}
+\begin{frame}[fragile]{Package manager and Environments}
 	\begin{itemize}
-		\item A package (library or application) is a collection of code that helps you accomplish tasks. Be aware that a conda package may be a complete standalone application independent from Python. In this class, when we refer to a conda package, this is almost identical to refering to the respective Python package.
-		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later!
-		\item A package and environment  manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package, downloads all packages and installs them.
-		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean seperation between projects. (But also means that you may have installed Python many times on your computer)
-		\item To make things more complicated: a conda package is not a python package...
+		\item A package (library or application) is a collection of code that helps you accomplish
+            tasks (a bit similar to the \verb|setup.exe| in Windows).
+		\item There are e.g. packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later!
+		\item A package manager is a convenient way to install software: it resolves all
+            dependencies (=other packages needed by the package you want to install), downloads all packages and installs them.
+		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean separation between projects. (But also means that you may have installed Python many times on your computer)
 	\end{itemize}
 
 \end{frame}
@@ -47,7 +48,7 @@
 	\begin{itemize}
 		\item We are going to use conda as package manager.
 		\item Anaconda is a system that packages a lot of software together with conda and runs on Windows and Linux. It also has a graphical user interface. In class, we use the command line only. Anaconda provides a lot of software, also for R, you may explore it by starting the graphical user interface. (we do not dig deeper here).
-		\item Miniconda is an alternative to use conda. It is smaller and just comes with the core libraries which are necessary to use conda.
+		\item Miniconda is an alternative to Anaconda. It is smaller and just comes with the core libraries which are necessary to use conda.
 
 	\end{itemize}
 
@@ -73,7 +74,7 @@
 \begin{frame}[fragile]{Using conda environments}
 
 	\begin{itemize}
-		\item A conda environment allows you to install a seperate version of Python (or any other conda supported software) with associated packages
+		\item A conda environment allows you to install a separate version of Python (or any other conda supported software) with associated packages
 
 		\item List all available environments
 		\begin{verbatim}
@@ -114,7 +115,8 @@
 		\begin{verbatim}
 		conda activate scientific-computing
 		\end{verbatim}
-		\item Observe how the bash changes - \textit{(scientific-computing)} is shown on the command line now!
+		\item Observe how the command line indicates the active environment:
+            \textit{(scientific-computing)} is now displayed
 		\item Not activating the correct environment is a very common source of problems! Check your environment!
 
 	\end{itemize}
@@ -131,9 +133,10 @@
 
 	\begin{itemize}
 		\item In principle, you can write your code in any test editor and then run it on the command line
-		\item A much better option would be to use an integrated development environment (IDE) such as pyCharm. (Syntax highlighting, code linting, etc.)
+		\item A much better option would be to use an integrated development environment (IDE) such
+            as PyCharm (syntax highlighting, code linting, etc.).
 		\item A different form of coding environment are so called \textit{Jupyter Notebooks}
-		\item Here, the code is written on a webpage, sent to a server, executed there, and results are displayed in the notebook again.
+		\item Here, the code is written in the web browser, sent to a server, executed there, and results are displayed in the notebook again.
 
 	\end{itemize}
 
@@ -208,9 +211,9 @@ conda install nb_conda_kernels
 
 \begin{frame}{Some interesting links}
 	\begin{itemize}
-		\item \href{https://www.edureka.co/blog/wp-content/uploads/2018/10/Jupyter_Notebook_CheatSheet_Edureka.pdf}{jupyter notebook Cheatsheet}
+		\item \href{https://www.edureka.co/blog/wp-content/uploads/2018/10/Jupyter_Notebook_CheatSheet_Edureka.pdf}{Jupyter notebook cheatsheet}
 
-		\item \href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class!}
+		\item \href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class}
 
 		\item \href{https://docs.python-guide.org/}{The Hitchhiker's Guide to Python}
 
