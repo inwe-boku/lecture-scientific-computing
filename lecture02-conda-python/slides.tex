@@ -10,9 +10,9 @@
 \section{Conda}
 
 \begin{frame}{Organization}
-	
+
 	\begin{itemize}
-		\item Please help writing today's lecture notes at XXX 
+		\item Please help writing today's lecture notes at XXX
 		\item Grading
 			\begin{itemize}
 				\item Do your homework in your group! We'll check repositories.
@@ -25,13 +25,13 @@
 
 	Please download Anaconda from
 	\href{https://www.anaconda.com/distribution/}{https://www.anaconda.com/distribution/}\\
-	
+
 \end{frame}
 
 \begin{frame}{Package and Environment Manager}
 	\begin{itemize}
 		\item A package (library or application) is a collection of code that helps you accomplish tasks. Be aware that a conda package may be a complete standalone application independent from Python. In this class, when we refer to a conda package, this is almost identical to refering to the respective Python package.
-		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later! 
+		\item There are e.g. Python packages for machine learning, for plotting data, for working with tabular data, or for working with matrix-data. More on that later!
 		\item A package and environment  manager is there to help you setup a stable environment for your programming system: e.g. it resolves all relevant dependencies when you install a new package, downloads all packages and installs them.
 		\item Conda also allows to create environments: within an environment, you are free to install a different Python version, different packages and package versions etc. This helps in having a clean seperation between projects. (But also means that you may have installed Python many times on your computer)
 		\item To make things more complicated: a conda package is not a python package...
@@ -43,7 +43,7 @@
 \begin{frame}{Package Manager of our choice}
 
 	\begin{itemize}
-		\item We are going to use conda as package manager. 
+		\item We are going to use conda as package manager.
 		\item Anaconda is a system that packages a lot of software together with conda and runs on Windows and Linux. It also has a graphical user interface. In class, we use the command line only. Anaconda provides a lot of software, also for R, you may explore it by starting the graphical user interface. (we do not dig deeper here).
 		\item Miniconda is an alternative to use conda. It is smaller and just comes with the core libraries which are necessary to use conda.
 
@@ -167,17 +167,17 @@
 		jupyter notebook &
 		\end{verbatim}
 		This will start the Jupyter Notebook server within the current working directory as a background process and starts a browser.
-		
+
 		To stop it type
 		\begin{verbatim}
 		fg
 		CTRL-C
 		\end{verbatim}
-		
+
 		If you want to use conda environments in your notebooks, do the following:
 		\begin{itemize}
 			\item Install \textit{ipykernel} in your environment
-		
+
 		\begin{verbatim}
 		conda activate <conda-environment>
 		conda install ipykernel
@@ -192,16 +192,16 @@ conda install nb_conda_kernels
 \end{frame}
 
 \begin{frame}[fragile]{Standard Browser and Jupyter Notebooks}
-	
+
 	jupyter notebook may start with an unwanted Browser. Two things you should try:
 	\begin{itemize}
 		\item Set your desired Browser as Standard Browser in Windows Settings (Control Panel - Apps - Default Browser)
 		\item try
 			\begin{verbatim}
 		git config --global web.browser google-chrome	\end{verbatim}
-		
+
 	\end{itemize}
-	
+
 \end{frame}
 
 \begin{frame}{Some interesting links}
@@ -209,12 +209,12 @@ conda install nb_conda_kernels
 		\item \href{https://www.edureka.co/blog/wp-content/uploads/2018/10/Jupyter_Notebook_CheatSheet_Edureka.pdf}{jupyter notebook Cheatsheet}
 
 		\item \href{https://www.preisjaeger.at/deals/gratis-it-workshops-e-books-von-packtpubcom-227041}{Free Python class!}
-		
+
 		\item \href{https://docs.python-guide.org/}{The Hitchhiker's Guide to Python}
-			
+
 	\end{itemize}
 
-	
+
 \end{frame}
 
 % how to use jupyter as a calculator
@@ -271,14 +271,14 @@ conda install nb_conda_kernels
                 mgf=padding.MGF1(algorithm=hashes.SHA256()),
                 algorithm=hashes.SHA256(),
                 label=None))
-	
+
 	filename = "group-members.txt"
-	
+
 	with(open(filename, 'wb') as f):
-	
+
 		f.write(encrypted)
 		f.close()
-	
+
 	\end{verbatim}
 
 	\end{frame}
