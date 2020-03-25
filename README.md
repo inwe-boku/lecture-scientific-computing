@@ -15,6 +15,6 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 - [Command line, GIT and version control](lecture00-git-version-control/slides.pdf)
 
 ## Questions
-- [Open questtions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
+- [Open questions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
 - [Answered questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue+is%3Aclosed)
 - [All questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue)
