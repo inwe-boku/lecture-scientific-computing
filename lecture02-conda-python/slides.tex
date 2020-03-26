@@ -261,6 +261,8 @@ git pull --no-edit upstream master\end{verbatim}
 	\begin{verbatim}
 """Store personal data encrypted with our public key."""
 
+import subprocess
+
 # if you get an ImportError, you missed to install
 # the package cryptography with conda
 from cryptography.hazmat.backends import default_backend
@@ -268,33 +270,50 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-# open and read the public key
-with open("public_key.pem", "rb") as key_file:
-    public_key = serialization.load_pem_public_key(
-        key_file.read(), backend=default_backend()
-        )
-
-name_mapping = b"First Last;1234565;github-account-name;git name;git mail address"
-	\end{verbatim}
+# change this:
+real_name = "First Last"
+github_account = "mynickname"
+regstration_number = "123456"\end{verbatim}
 
 \end{frame}
 
 \begin{frame}[fragile]{Homework assignment (III)}
 
 	\begin{verbatim}
+# open and read the public key
+with open("public_key.pem", "rb") as key_file:
+    public_key = serialization.load_pem_public_key(
+        key_file.read(), backend=default_backend())
+
+def git_config_value(param):
+    raw_value = subprocess.check_output(
+        ['git', 'config', f'user.{param}'])
+    return raw_value.decode().strip()
+
+# determine git name/mail address
+git_name = git_config_value('name')
+git_mail = git_config_value('email')
+
+# concatenate strings as CSV format
+name_mapping = ";".join((real_name, github_account,
+                         regstration_number, git_name, git_mail))\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Homework assignment (IV)}
+	\begin{verbatim}
+# encrypt string
 encrypted = public_key.encrypt(
-    name_mapping,
+    name_mapping.encode(),
     padding.OAEP(
     mgf=padding.MGF1(algorithm=hashes.SHA256()),
     algorithm=hashes.SHA256(),
     label=None))
 
-# change this to your github account name!
-filename = "group-member-<github-account-name>.txt"
-
-with open(filename, 'wb') as f:
+# write encrypted data to disk
+out_filename = f"group-member-{github_account}.txt"
+with open(out_filename, 'wb') as f:
     f.write(encrypted)\end{verbatim}
-
 	\end{frame}
 
 \end{document}
