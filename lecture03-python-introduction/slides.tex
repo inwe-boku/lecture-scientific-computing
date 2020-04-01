@@ -13,7 +13,42 @@
 % functions
 % if, for (while)
 
+\section{Leftover from last week}
+
+\begin{frame}[fragile]{Using Jupyter Notebooks}
+	
+	If you want to use conda environments in your notebooks, do the following:
+	\begin{itemize}
+		\item Install \textit{ipykernel} in your environment
+		
+		\begin{verbatim}
+		conda activate <conda-environment>
+		conda install ipykernel
+		conda deactivate
+		\end{verbatim}
+		\item Additionally, install \textit{nb\_conda\_kernels} in \textit{base} if you run your jupyter notebook from base:
+		\begin{verbatim}
+		conda activate base    # could be also some other environment
+		conda install nb_conda_kernels
+		\end{verbatim}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{A hint on replacements in exercises and <>}
+	
+	If you see text enclosed in <> on our slides or in the notebook such as
+	\begin{verbatim}
+	<something here>
+	\end{verbatim}
+	it means that 'something here' should be replaced by some input from your side. (Hopefully obvious from the context)
+	
+	Anything else can just be copied.
+
+\end{frame}
+
+
 \section{Homework assignment}
+
 
 \begin{frame}[fragile]{Homework assignment}
 
