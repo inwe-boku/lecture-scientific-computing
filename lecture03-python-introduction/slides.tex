@@ -7,24 +7,58 @@
 	\tableofcontents
 \end{frame}
 
-\section{Intro}
+\section{Organizational matters}
+\begin{frame}[fragile]{Organizational matters}
+	\begin{itemize}
+		\item Please participate in writing today's lecture notes:
+            \href{https://yourpart.eu/p/lecture-scientific-computing03-notes}{https://yourpart.eu/p/lecture-scientific-computing03-notes}\pause
+        \item Glossary:\\
+            \href{https://yourpart.eu/p/lecture-scientific-computing-glossary}{https://yourpart.eu/p/lecture-scientific-computing-glossary}
+	\end{itemize}
+\end{frame}
 
-% variables
-% functions
-% if, for (while)
+
+\begin{frame}[fragile]{Disclaimer}
+    \begin{center}
+        \includegraphics[height=0.6\textheight]{covid-19-expert.png}
+    \end{center}
+
+    \pause
+    \textbf{Disclaimer:} Models used in this lecture are highly simplified and supposed to serve as examples
+    to study Python. Don't use models as prediction. If you do your own data analysis on important
+    topics, compare it with other published studies.
+
+    {\tiny Source: \href{https://twitter.com/amrith/status/1242481942026530817}{https://twitter.com/amrith/status/1242481942026530817}}
+\end{frame}
+
+
+\section{Python introduction}
+\begin{frame}[fragile]{Python introduction}
+    See Jupyter notebook:\\
+    \href{https://github.com/inwe-boku/lecture-scientific-computing/blob/master/lecture03-python-introduction/lecture03.ipynb}{lecture03.ipynb}
+\end{frame}
+
 
 \section{Homework assignment}
-
 \begin{frame}[fragile]{Homework assignment}
+	\begin{itemize}
+		\item Fetch the latest changes from the upstream repository, to get the homework Notebook:
+            {\scriptsize
+            \begin{verbatim}
+cd path/to/homework-scientific-computing
+git pull --no-edit upstream master
+git push\end{verbatim}
+            }
+        \item Start Jupyter and solve the exercises in the notebook:
+            \href{https://github.com/inwe-boku/homework-scientific-computing/blob/master/homework03-python-introduction/homework03.ipynb}{homework03.ipynb}.
+        \item Commit the notebook file and push it to your fork.
+	\end{itemize}
 
-    Write a function, which calculates the number of new infections at time $t$.
-
-    \[
-        \frac{e^{-(x-\mu)/s}} {s\left(1+e^{-(x-\mu)/s}\right)^2}
-    \]
-
-    Then use the following code to plot it:
-    % TODO would be nice to prepare a jupyter notebook with widgets to adjust parameters!
+    \bigskip
+    To avoid merge conflicts, you can either commit a copy of the notebook and add your Github name
+    to the filename or solve the exercises together with your group members and \verb|git pull|
+    before starting to work on the notebook and \verb|git push| before the next group member starts
+    working on it.
 \end{frame}
 
 \end{document}
