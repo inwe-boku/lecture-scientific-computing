@@ -25,6 +25,9 @@ Pro Git book - this answers all questions thoroughly, but might not be easy to r
 A guided tour that walks through the fundamentals of Git:
     http://gitimmersion.com
 
+Interactive Git exercises in the browser:
+   https://learngitbranching.js.org/
+
 A game playable in GIT:
     https://github.com/git-game/git-game/tree/bug
 
