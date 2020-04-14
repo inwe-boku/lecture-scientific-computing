@@ -1,4 +1,4 @@
-![MIT license](https://badgen.net/github/license/inwe-boku/lecture-scientific-computing)
+[![MIT license](https://badgen.net/github/license/inwe-boku/lecture-scientific-computing)](https://choosealicense.com/licenses/mit/)
 ![Closed Github issues](https://badgen.net/github/closed-issues/inwe-boku/lecture-scientific-computing)
 ![Open Github issues](https://badgen.net/github/open-issues/inwe-boku/lecture-scientific-computing)
 ![Compile slides](https://github.com/inwe-boku/lecture-scientific-computing/workflows/Compile%20slides/badge.svg)
