@@ -1,0 +1,115 @@
+\input{../common/header.tex}
+\subtitle{Numpy and the Python Scientific Ecosystem}
+\date{2020-04-30}
+\input{../common/title.tex}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{Misc}
+\begin{frame}{Notes}
+	\begin{itemize}
+		\item Please participate in writing today's lecture notes:
+            \href{https://yourpart.eu/p/lecture-scientific-computing04-notes}{https://yourpart.eu/p/lecture-scientific-computing04-notes}
+        \item Glossary:\\
+            \href{https://yourpart.eu/p/lecture-scientific-computing-glossary}{https://yourpart.eu/p/lecture-scientific-computing-glossary}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Last homework}
+    Discussion of homework 03.
+    \bigskip
+    \pause
+
+	\begin{itemize}
+        \item Read and follow the exercise description carefully!
+        \item Avoid working on the same notebook at the same time, use git pull/push before
+            starting and when your done
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Review test}
+    See menti.com
+\end{frame}
+
+
+\section{Recap}
+\begin{frame}[fragile]{Recap}
+    \begin{itemize}[<+->]
+        \item how to use command line (\verb|cd|, \verb|ls|, \verb|git|, ...)
+        \item git: git pull/push/commit (sorry about all the troubles!)
+	    \begin{itemize}
+            \item knowing how to use pull/push/commit should suffice for most cases
+            \item accidents can be \emph{really} hard to resolve, especially with Jupyter notebooks :(
+            \item $\rightarrow$ google error messages, we try to give precise instructions if
+                we can foresee difficulties (not always), maybe add an advanced part if time
+                permits
+	    \end{itemize}
+        \item conda, anaconda: install libraries, programming tools and scientific (opensource) software
+        \item how to use a Jupyter Notebook (run server, create notebooks, run cells, ...)
+        \item basic python syntax (variables, lists, functions, ...)
+        \item a quick intro to some data types (integer, float, string, list)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Recap: Jupyter notebooks}
+    How to run Python code
+	\begin{itemize}
+        \item Jupyter notebook (this is the only thing we are using in this lecture)
+        \item Python terminal
+        \item run a Python script from command line
+        \item using an IDE/editor to run a script
+        \item using an IDE/editor for something fancy (scientific mode with Spyder/PyCharm)
+	\end{itemize}
+
+    \pause
+    Notebooks are low-threshold and easy to start with, but they can be confusing too.
+
+    \bigskip
+    A very good talk about why Jupyter notebooks are bad:
+    \href{https://www.youtube.com/watch?v=7jiPeIFXb6U}{https://www.youtube.com/watch?v=7jiPeIFXb6U}\\
+    \medskip
+    {\small (But you still have to use them, because there is no better alternative at the
+    moment.)}
+\end{frame}
+
+
+\section{Numpy and more}
+\begin{frame}[fragile]{Numpy and more}
+    See lecture04.ipynb!
+
+    \bigskip
+    Especially today: ask as many (good) questions as you can!
+\end{frame}
+
+
+\section{Homework assignment}
+\begin{frame}[fragile]{Homework assignment}
+	\begin{itemize}
+		\item Fetch the latest changes from the upstream repository, to get the homework Notebook:
+            {\scriptsize
+            \begin{verbatim}
+cd path/to/homework-scientific-computing
+git pull --no-edit upstream master
+git push\end{verbatim}
+            }
+        \item Start Jupyter and solve the exercises in the notebook:
+            \href{https://github.com/inwe-boku/homework-scientific-computing/blob/master/homework04-python-scientific-ecosystem//homework04.ipynb}{homework04.ipynb}.
+        \item Commit the notebook file and push it to your fork.
+	\end{itemize}
+
+    \bigskip
+    Do the homework together!
+
+    \bigskip
+    Due on 6th of May, 17:00.
+
+    \bigskip
+    To avoid merge conflicts, you can either commit a copy of the notebook and add your Github name
+    to the filename or solve the exercises together with your group members and \verb|git pull|
+    before starting to work on the notebook and \verb|git push| before the next group member starts
+    working on it.
+\end{frame}
+
+\end{document}
