@@ -13,10 +13,11 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 
 
 ## Slides
-- [Introduction](lecture00-introduction/slides.pdf)
-- [Command line, GIT and version control](lecture00-git-version-control/slides.pdf)
-- [Conda and Python](lecture02-conda-python/slides.pdf)
-- Python introduction ([PDF slides](lecture03-python-introduction/slides.pdf), [Jupyter notebook](lecture03-python-introduction/lecture03.ipynb))
+- Lecture 00: [Introduction](lecture00-introduction/slides.pdf)
+- Lecture 01: [Command line, GIT and version control](lecture00-git-version-control/slides.pdf)
+- Lecture 02: [Conda and Python](lecture02-conda-python/slides.pdf)
+- Lecture 03: Python introduction ([PDF slides](lecture03-python-introduction/slides.pdf), [Jupyter notebook](lecture03-python-introduction/lecture03.ipynb))
+- Lecture 04: Numpy and the Python Scientific Ecosystem ([PDF slides](lecture04-python-scientific-ecosystem/slides.pdf), [Jupyter notebook](lecture04-python-scientific-ecosystem/lecture04.ipynb))
 
 ## Questions
 - [Open questions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
