@@ -55,6 +55,11 @@ slides.out
 slides.fls
 slides.vrb
 
-public-toilets.csv
-klima-und-wetter-wien.csv
+# config
 entsoe-data.config
+
+# data
+data/public-toilets.csv
+data/klima-und-wetter-wien.csv
+data/temperatures_era5.nc
+data/countries.geojson
