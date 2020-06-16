@@ -21,7 +21,7 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 - Lecture 05: Numpy and Scipy ([Jupyter notebook](lecture05-numpy-scipy/lecture05.ipynb), [RGB color slider](https://golobro.github.io/rgbcolorslider/))
 - Lecture 06: Pandas ([Jupyter notebook](lecture06-pandas/lecture06.ipynb))
 - Lecture 07: Fitting ([Jupyter notebook](lecture07-fitting/lecture07.ipynb))
-- Lecture 08: xarray ([Jupyter notebook](lecture08-xarray/lecture08.ipynb))
+- Lecture 08: xarray ([Jupyter notebook](lecture08-xarray/lecture08.ipynb), [Bonus material about using random forests](lecture08-xarray/predict-power-from-temperature.ipynb))
 
 ## Questions
 - [Open questions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
