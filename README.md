@@ -20,6 +20,9 @@ There is a [separate repository for your homeworks](https://github.com/inwe-boku
 - Lecture 04: Numpy and the Python Scientific Ecosystem ([PDF slides](lecture04-python-scientific-ecosystem/slides.pdf), [Jupyter notebook](lecture04-python-scientific-ecosystem/lecture04.ipynb))
 - Lecture 05: Numpy and Scipy ([Jupyter notebook](lecture05-numpy-scipy/lecture05.ipynb), [RGB color slider](https://golobro.github.io/rgbcolorslider/))
 - Lecture 06: Pandas ([Jupyter notebook](lecture06-pandas/lecture06.ipynb))
+- Lecture 07: Fitting ([Jupyter notebook](lecture07-fitting/lecture07.ipynb))
+- Lecture 08: xarray ([Jupyter notebook](lecture08-xarray/lecture08.ipynb))
+
 ## Questions
 - [Open questions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
 - [Answered questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue+is%3Aclosed)
