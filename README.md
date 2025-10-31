@@ -1,29 +1,9 @@
 [![MIT license](https://badgen.net/github/license/inwe-boku/lecture-scientific-computing)](https://choosealicense.com/licenses/mit/)
-![Closed Github issues](https://badgen.net/github/closed-issues/inwe-boku/lecture-scientific-computing)
-![Open Github issues](https://badgen.net/github/open-issues/inwe-boku/lecture-scientific-computing)
-![Compile slides](https://github.com/inwe-boku/lecture-scientific-computing/workflows/Compile%20slides/badge.svg)
 
-# Lecture Scientific Computing
+# Lecture: An introduction to scientific programming
 
-This repository contains slides and additional material for the course 731139 at [BOKU](boku.ac.at/).
-
-There is a [separate repository for your homeworks](https://github.com/inwe-boku/homework-scientific-computing).
-
-[Course details in BOKUonline](https://online.boku.ac.at/BOKUonline/wbLv.wbShowLVDetail?pStpSpNr=290035).
+This repository contains slides and additional material for the course WISO100303 at [BOKU](boku.ac.at/).
 
 
-## Slides
-- Lecture 00: [Introduction](lecture00-introduction/slides.pdf)
-- Lecture 01: [Command line, GIT and version control](lecture01-git-version-control/slides.pdf)
-- Lecture 02: [Conda and Python](lecture02-conda-python/slides.pdf)
-- Lecture 03: Python introduction ([PDF slides](lecture03-python-introduction/slides.pdf), [Jupyter notebook](lecture03-python-introduction/lecture03.ipynb))
-- Lecture 04: Numpy and the Python Scientific Ecosystem ([PDF slides](lecture04-python-scientific-ecosystem/slides.pdf), [Jupyter notebook](lecture04-python-scientific-ecosystem/lecture04.ipynb))
-- Lecture 05: Numpy and Scipy ([Jupyter notebook](lecture05-numpy-scipy/lecture05.ipynb), [RGB color slider](https://golobro.github.io/rgbcolorslider/))
-- Lecture 06: Pandas ([Jupyter notebook](lecture06-pandas/lecture06.ipynb))
-- Lecture 07: Fitting ([Jupyter notebook](lecture07-fitting/lecture07.ipynb))
-- Lecture 08: xarray ([Jupyter notebook](lecture08-xarray/lecture08.ipynb), [Bonus material about using random forests](lecture08-xarray/predict-power-from-temperature.ipynb))
-
-## Questions
-- [Open questions](https://github.com/inwe-boku/lecture-scientific-computing/issues)
-- [Answered questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue+is%3Aclosed)
-- [All questions](https://github.com/inwe-boku/lecture-scientific-computing/issues?q=is%3Aissue)
+* [Course details in BOKUonline](https://online.boku.ac.at/BOKUonline/ee/rest/pages/slc.tm.cp/course/317880).
+* [Course in BOKU learn](https://learn.boku.ac.at/course/view.php?id=75887)
